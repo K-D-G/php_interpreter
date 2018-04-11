@@ -17,11 +17,12 @@ namespace GROS{
       ~php();
 
       void interpret_sql(char* query, char* database);
-      char* standard_lib();
-      char* includes();
+      void standard_lib();
+      void includes();
 
-      char* for_loops();
-      char* while_loops();
+      void for_loops();
+      void while_loops();
+      void functions();
 
       bool export_html();
 
