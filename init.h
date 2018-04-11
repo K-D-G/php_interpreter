@@ -9,17 +9,19 @@ namespace GROS{
     class php{
     protected:
       directory* server_dir;
-      char* final_html="";
+      char* final_html;
+      char* code;
+      char* args;
     public:
-      php(char* code, char* args, directory* serverdir);
+      php(char* original_code, char* arguments, directory* serverdir);
       ~php();
 
       void interpret_sql(char* query, char* database);
-      char* standard_lib(char* code);
-      char* includes(char* code);
+      char* standard_lib();
+      char* includes();
 
-      char* for_loops(char* code);
-      char* while_loops(char* code);
+      char* for_loops();
+      char* while_loops();
 
       bool export_html();
 
