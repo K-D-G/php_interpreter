@@ -24,7 +24,7 @@ namespace GROS{
       void while_loops();
       void functions();
 
-      bool export_html();
+      char* export_html();
 
     };
   }

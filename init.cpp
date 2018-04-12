@@ -6,7 +6,8 @@ using namespace php_interpreter;
 using namespace interpreters;
 using namespace filesystem;
 
-
+//LIST OF PHP FUNCTIONS AT:
+//http://php.net/manual/en/funcref.php
 
 php::php(char* original_code, char* arguments, directory* serverdir){
   server_dir=serverdir;
@@ -47,6 +48,6 @@ void php::functions(){
 
 }
 
-bool php::export_html(){
-
+char* php::export_html(){
+  return final_html;
 }
