@@ -31,7 +31,7 @@ void php::includes(){
       char* file_name=""
       int j=i+10;
       while(true){if(code[j]=='.'){break;}else{file_name+=code[j];}}
-      char* file_data=controller::to_string(controller::read(false, server_dir, file_name, extension=="php"));
+      char* file_data=controller::to_string(controller::read(false, server_dir, file_name, extension="php"));
       final_html=file_data+final_html;
     }
   }
